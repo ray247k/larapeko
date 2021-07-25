@@ -12,3 +12,9 @@ composer require ray247k/larapeko @dev
 composer install
 php artisan vendor:publish --provider="Ray247k\LaraPeko\LaraPekoServiceProvider"
 ```
+
+我猜是
+```
+composer config repositories.ray247k git https://github.com/ray247k/larapeko
+```
+改天再研究，今天好累了
