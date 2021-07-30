@@ -3,8 +3,7 @@
 本來只是想取個什麼 Laraval Package 之類的名字，不小心就 Peko 了
 
 # 安裝方法
-clone 到本機之後（從 github 拉套件還沒研究好）
-在你要安裝套件的 Laravel 專案下使用指令
+clone 到本機之後在你要安裝套件的 Laravel 專案下使用指令
 
 ```
 composer config repositories.ray247k path ../larapeko
@@ -13,8 +12,9 @@ composer install
 php artisan vendor:publish --provider="Ray247k\LaraPeko\LaraPekoServiceProvider"
 ```
 
-我猜是
+如果儲存庫是在遠端的話，把 config repositories 換成用 cvs 方式引用
 ```
-composer config repositories.ray247k git https://github.com/ray247k/larapeko
+composer config repositories.ray247k cvs https://github.com/ray247k/larapeko
 ```
-改天再研究，今天好累了
+
+如果是私有版本庫，那 url 換成 ssh 的網址 `git@github.com:ray247k/larapeko.git` 就可以了
