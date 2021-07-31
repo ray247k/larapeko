@@ -23,6 +23,11 @@
             "Ray247k\\LaraPeko\\": "src"
         }
     },
+    "scripts": {
+        "post-install-cmd": [
+            "@php ./vendor/bin/grumphp git:init"
+        ]
+    },
     "extra": {
         "laravel": {
             "providers": [
