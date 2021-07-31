@@ -12,9 +12,19 @@ composer install
 php artisan vendor:publish --provider="Ray247k\LaraPeko\LaraPekoServiceProvider"
 ```
 
-如果儲存庫是在遠端的話，把 config repositories 換成用 cvs 方式引用
+如果儲存庫是在遠端的話，把 config repositories 換成用 vcs 方式引用
 ```
-composer config repositories.ray247k cvs https://github.com/ray247k/larapeko
+composer config repositories.ray247k vcs https://github.com/ray247k/larapeko
 ```
 
-如果是私有版本庫，那 url 換成 ssh 的網址 `git@github.com:ray247k/larapeko.git` 就可以了
+也可以直接修改 composer.json 裡面的 repositories 內容
+```json
+"repositories": {
+    "ray247k": {
+        "type": "vcs",
+        "url": "https://github.com/ray247k/larapeko"
+    }
+}
+```
+
+若是私有版本庫，那 url 換成 ssh 的網址 `git@github.com:ray247k/larapeko.git` 就可以了
