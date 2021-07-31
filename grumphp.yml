@@ -1,0 +1,7 @@
+grumphp:
+    tasks: {
+        yamllint: null,
+        phplint: ~,
+        phpunit: ~,
+        phpcs: ~
+    }

@@ -8,10 +8,10 @@ class LaraPekoServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-       $source = realpath($raw = __DIR__.'/../config/lara_peko.php') ?: $raw;
-       $this->publishes([
+        $source = realpath($raw = __DIR__ . '/../config/lara_peko.php') ?: $raw;
+        $this->publishes([
            $source => config_path('lara_peko.php'),
-       ]);
+        ]);
     }
 
     // 註冊套件函式
