@@ -8,9 +8,13 @@ class LaraPekoServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        $source = realpath($raw = __DIR__ . '/../config/lara_peko.php') ?: $raw;
+        $this->configPublish();
+    }
+
+    public function configPublish()
+    {
         $this->publishes([
-           $source => config_path('lara_peko.php'),
+            __DIR__ . '/../config/lara_peko.php' => config_path('lara_peko.php')
         ]);
     }
 
